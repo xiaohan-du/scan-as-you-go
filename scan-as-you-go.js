@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3306;
 
 var con = mysql.createConnection({
     host: process.env.MYSQL_HOST,
@@ -12,7 +12,7 @@ var con = mysql.createConnection({
 
 con.connect(function(err) {
   if (err) throw err;
-  const dbName = 'scanAsYouGo';
+  const dbName = 'scanAsYouGoDB';
   const barcodesTable = 'barcodes';
   console.log("Connected!");
   con.query(`DROP DATABASE IF EXISTS ${dbName}`, function (err, result) {
