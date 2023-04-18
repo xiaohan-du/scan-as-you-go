@@ -6,8 +6,8 @@ const PORT = process.env.PORT || 3000;
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "comsc",
-  database: 'scanAsYouGo'
+  password: "1_0;c8i5R8.+UELIeCBA@%6#H0hL*VF3",
+  database: 'scanAsYouGoSQL'
 });
 
 con.connect(function(err) {
