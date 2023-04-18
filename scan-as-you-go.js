@@ -4,10 +4,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "1_0;c8i5R8.+UELIeCBA@%6#H0hL*VF3",
-  database: 'scanAsYouGoSQL'
+    host: process.env.MYSQL_HOST,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE,
 });
 
 con.connect(function(err) {
