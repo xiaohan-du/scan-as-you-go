@@ -1,6 +1,7 @@
 const mysql = require('mysql');
 const express = require('express');
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 var con = mysql.createConnection({
   host: "localhost",
@@ -44,5 +45,5 @@ app.get('/barcodes', function (req, res) {
 });
 
 app.listen(3000, function () {
-  console.log('API listening on port 3000!');
+    console.log(`server started on port ${PORT}`);
 });
